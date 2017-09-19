@@ -15,11 +15,24 @@
 
 //Question 1
 var answerDaughter = prompt('Do I have a daughter?').toLowerCase();
+console.log('answerDaughter is ' + answerDaughter);
 
-if (answerDaughter === 'n' || answerDaughter === 'no'){
+if (answerDaughter === 'y' || answerDaughter === 'yes'){
   //Tell user they got it correct
-  alert('Correct!')
+  alert('Correct!  She turns 2 in October and her name is Sarah.');
 } else {
   //Tell user they got it wrong
-  alert('Wrong!')
+  alert('Whoops!  My daughter\'s name is Sarah and she will be 2 in October.');
+}
+
+//Question 2
+var answerDog = prompt('Do I have a dog?').toLowerCase();
+console.log('answerDog is ' + answerDog);
+
+if (answerDog === 'y' || answerDog === 'yes'){
+  //Tell user they got it correct
+  alert('Correct!  I have a 90 pound Golden Doodle named Dewey.');
+} else {
+  //Tell user they got it wrong
+  alert('Whoops!  Dewey would be upset with you!  He\'s my 90 pound Golden Doodle');
 }
