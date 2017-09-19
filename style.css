@@ -1,4 +1,11 @@
 * {
   Color:red;
+  background-color:lightblue;
 
+}
+p{
+  color:black;
+  border-color: blue;
+  border: 5px;
+  border-style: solid;
 }
