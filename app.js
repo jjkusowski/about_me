@@ -36,3 +36,39 @@ if (answerDog === 'y' || answerDog === 'yes'){
   //Tell user they got it wrong
   alert('Whoops!  Dewey would be upset with you!  He\'s my 90 pound Golden Doodle.');
 }
+
+//Question 3
+var answerBook = prompt('Have I written a New York Times Best Seller book?').toLowerCase();
+console.log('answerBook is ' + answerBook);
+
+if (answerBook === 'n' || answerBook === 'no'){
+  //Tell user they got it correct
+  alert('Couldn\'t fool you!  That would be amazing, but I have not.');
+} else {
+  //Tell user they got it wrong
+  alert('Really?!?  I have some land in Forks to sell you.');
+}
+
+//Question 4
+var answerHome = prompt('Do I live in Seattle?').toLowerCase();
+console.log('answerHome is ' + answerHome);
+
+if (answerHome === 'y' || answerHome === 'yes'){
+  //Tell user they got it correct
+  alert('Yes!  I live in West Seattle.');
+} else {
+  //Tell user they got it wrong
+  alert('Sorry!  I do live in Seattle.  West Seattle, in particular.');
+}
+
+//Question 5
+var answerLions = prompt('Are the Detroit Lions my favorite NFL team?').toLowerCase();
+console.log('answerLions is ' + answerLions);
+
+if (answerLions === 'y' || answerLions === 'yes'){
+  //Tell user they got it correct
+  alert('You know it!  And they are going to win the Super Bowl! (No they won\'t.)');
+} else {
+  //Tell user they got it wrong
+  alert('You barely know me!  It\'s rough, but I love my Lions.');
+}
