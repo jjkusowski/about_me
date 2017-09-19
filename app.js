@@ -34,5 +34,5 @@ if (answerDog === 'y' || answerDog === 'yes'){
   alert('Correct!  I have a 90 pound Golden Doodle named Dewey.');
 } else {
   //Tell user they got it wrong
-  alert('Whoops!  Dewey would be upset with you!  He\'s my 90 pound Golden Doodle');
+  alert('Whoops!  Dewey would be upset with you!  He\'s my 90 pound Golden Doodle.');
 }
