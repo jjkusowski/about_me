@@ -121,19 +121,20 @@ console.log('Score after question 6 is ' + score);
 //Question 7
 
 var mySports = ['basketball', 'hockey', 'baseball', 'football'];
+var mySportsAsString = mySports.join(', ');
 for (i = 1; i < 8; i++) {
   if (i === 7){
-    alert('I\'m sorry.  You are out of tries.  The sports I\'ve played are ' + mySports);
+    alert('I\'m sorry.  You are out of tries.  The sports I\'ve played are ' + mySportsAsString + '.');
   } else {
     var sportsGuess = prompt('I played a lot of team sports growing up.  Can you guess one?');
     sportsGuess = sportsGuess.toLowerCase();
     console.log('Guess '+ i + ':' + sportsGuess)
     if (mySports.indexOf(sportsGuess) > -1) {
-      alert('Correct!  Nice going!');
+      alert('Correct!  Nice going!  The sports I\'ve played are ' + mySportsAsString + '.');
       score++;
       break;
     } else {
-      alert('Nope!  Try again!');
+      alert('Nope!  I did not play that one.');
     }
   }
 }
