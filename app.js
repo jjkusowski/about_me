@@ -3,6 +3,8 @@
 var userName = prompt('Welcome to my About Me page!  What is your name?');
 alert('Hi, ' + userName + ', nice to meet you.  I wrote a quiz about me.  See if you can answer correctly!');
 
+var score = 0;
+
 //Question 1
 var answerDaughter = prompt('Do I have a daughter?').toLowerCase();
 console.log('answerDaughter is ' + answerDaughter);
@@ -10,10 +12,13 @@ console.log('answerDaughter is ' + answerDaughter);
 if (answerDaughter === 'y' || answerDaughter === 'yes'){
   //Tell user they got it correct
   alert('Correct!  She turns 2 in October and her name is Sarah.');
+  score++;
 } else {
   //Tell user they got it wrong
   alert('Whoops!  My daughter\'s name is Sarah and she will be 2 in October.');
 }
+//score update
+console.log('Score after question 1 is ' + score);
 
 //Question 2
 var answerDog = prompt('Do I have a dog?').toLowerCase();
@@ -22,10 +27,14 @@ console.log('answerDog is ' + answerDog);
 if (answerDog === 'y' || answerDog === 'yes'){
   //Tell user they got it correct
   alert('Correct!  I have a 90 pound Golden Doodle named Dewey.');
+  score++;
 } else {
   //Tell user they got it wrong
   alert('Whoops!  Dewey would be upset with you!  He\'s my 90 pound Golden Doodle.');
 }
+//score update
+console.log('Score after question 2 is ' + score);
+
 
 //Question 3
 var answerBook = prompt('Have I written a New York Times Best Seller book?').toLowerCase();
@@ -34,10 +43,14 @@ console.log('answerBook is ' + answerBook);
 if (answerBook === 'n' || answerBook === 'no'){
   //Tell user they got it correct
   alert('Couldn\'t fool you!  That would be amazing, but I have not.');
+  score++;
 } else {
   //Tell user they got it wrong
   alert('Really?!?  I have some land in Forks to sell you.');
 }
+//score update
+console.log('Score after question 3 is ' + score);
+
 
 //Question 4
 var answerHome = prompt('Do I live in Seattle?').toLowerCase();
@@ -46,10 +59,14 @@ console.log('answerHome is ' + answerHome);
 if (answerHome === 'y' || answerHome === 'yes'){
   //Tell user they got it correct
   alert('Yes!  I live in West Seattle.');
+  score++;
 } else {
   //Tell user they got it wrong
   alert('Sorry!  I do live in Seattle.  West Seattle, in particular.');
 }
+//score update
+console.log('Score after question 4 is ' + score);
+
 
 //Question 5
 var answerLions = prompt('Are the Detroit Lions my favorite NFL team?').toLowerCase();
@@ -58,10 +75,14 @@ console.log('answerLions is ' + answerLions);
 if (answerLions === 'y' || answerLions === 'yes'){
   //Tell user they got it correct
   alert('You know it!  And they are going to win the Super Bowl! (No they won\'t.)');
+  score++;
 } else {
   //Tell user they got it wrong
   alert('You barely know me!  It\'s rough, but I love my Lions.');
 }
+//score update
+console.log('Score after question 5 is ' + score);
+
 
 //Question 6
 var myNumber = Math.floor((Math.random() * 10) + 1);
@@ -78,6 +99,7 @@ for (var i = 0; i < 5; i++) {
     if (userNumber === myNumber){
       //Hooray!  Increment score.  Break.
       alert('You are correct!  It is ' + myNumber + '.  On to the next question!');
+      score++;
       break;
     } else if (userNumber < myNumber){
       //Too low.
@@ -93,3 +115,26 @@ for (var i = 0; i < 5; i++) {
   }
 
 }
+//score update
+console.log('Score after question 6 is ' + score);
+
+//Question 7
+
+var mySports = ['basketball', 'hockey', 'baseball', 'football'];
+for (i=1; i < 8; i++) {
+  if (i === 7){
+    alert('I\'m sorry.  You are out of tries.  The sports I\'ve played are ' + mySports);
+  } else {
+    var sportsGuess = prompt('I played a lot of team sports growing up.  Can you guess one?');
+    console.log('Guess '+ i + ':' + sportsGuess)
+    if (mySports.indexOf(sportsGuess) > -1) {
+      alert('Correct!  Nice going!');
+      score++;
+      break;
+    } else {
+      alert('Nope!  Try again!');
+    }
+  }
+}
+//score update
+console.log('Score after question 7 is ' + score);
