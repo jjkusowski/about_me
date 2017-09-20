@@ -97,7 +97,7 @@ for (var i = 0; i < 5; i++) {
     var userNumber = parseInt(prompt("Please pick a number between 1 and 10."));
     console.log('userNumber is: ' + userNumber + ' Match? ' + (userNumber === myNumber));
     if (userNumber === myNumber){
-      //Hooray!  Increment score.  Break.
+      //correct answer
       alert('You are correct!  It is ' + myNumber + '.  On to the next question!');
       score++;
       break;
@@ -121,11 +121,12 @@ console.log('Score after question 6 is ' + score);
 //Question 7
 
 var mySports = ['basketball', 'hockey', 'baseball', 'football'];
-for (i=1; i < 8; i++) {
+for (i = 1; i < 8; i++) {
   if (i === 7){
     alert('I\'m sorry.  You are out of tries.  The sports I\'ve played are ' + mySports);
   } else {
     var sportsGuess = prompt('I played a lot of team sports growing up.  Can you guess one?');
+    sportsGuess = sportsGuess.toLowerCase();
     console.log('Guess '+ i + ':' + sportsGuess)
     if (mySports.indexOf(sportsGuess) > -1) {
       alert('Correct!  Nice going!');
@@ -138,3 +139,15 @@ for (i=1; i < 8; i++) {
 }
 //score update
 console.log('Score after question 7 is ' + score);
+
+
+//Tell user their score
+if (score === 7) {
+  alert('Amazing, ' + userName + '!  You got ' + score + ' out of 7 correct!  I think this means we are BFF\'s!');
+} else if (score > 4) {
+  alert('Great job, ' + userName + '!  You got ' + score + ' out of 7 correct.');
+} else if (score > 0) {
+  alert(score + ' out of 7, ' + userName + '?  You need to get to know me a little better.');
+} else {
+  alert('Zero, ' + userName + '?  You got zero?  Try a little harder next time.')
+}
