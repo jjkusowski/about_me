@@ -45,20 +45,23 @@ function question2() {
 question2();
 
 //Question 3
-var answerBook = prompt('Have I written a New York Times Best Seller book?').toLowerCase();
-console.log('answerBook is ' + answerBook);
+function question3() {
+  var answerBook = prompt('Have I written a New York Times Best Seller book?').toLowerCase();
+  console.log('answerBook is ' + answerBook);
 
-if (answerBook === 'n' || answerBook === 'no'){
-  //Tell user they got it correct
-  alert('Couldn\'t fool you!  That would be amazing, but I have not.');
-  score++;
-} else {
-  //Tell user they got it wrong
-  alert('Really?!?  I have some land in Forks to sell you.');
+  if (answerBook === 'n' || answerBook === 'no'){
+    //Tell user they got it correct
+    alert('Couldn\'t fool you!  That would be amazing, but I have not.');
+    score++;
+  } else {
+    //Tell user they got it wrong
+    alert('Really?!?  I have some land in Forks to sell you.');
+  }
+  //score update
+  console.log('Score after question 3 is ' + score);
 }
-//score update
-console.log('Score after question 3 is ' + score);
 
+question3();
 
 //Question 4
 var answerHome = prompt('Do I live in Seattle?').toLowerCase();
