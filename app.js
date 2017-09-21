@@ -84,19 +84,23 @@ question4();
 
 
 //Question 5
-var answerLions = prompt('Are the Detroit Lions my favorite NFL team?').toLowerCase();
-console.log('answerLions is ' + answerLions);
+function question5() {
+  var answerLions = prompt('Are the Detroit Lions my favorite NFL team?').toLowerCase();
+  console.log('answerLions is ' + answerLions);
 
-if (answerLions === 'y' || answerLions === 'yes'){
-  //Tell user they got it correct
-  alert('You know it!  And they are going to win the Super Bowl! (No they won\'t.)');
-  score++;
-} else {
-  //Tell user they got it wrong
-  alert('You barely know me!  It\'s rough, but I love my Lions.');
+  if (answerLions === 'y' || answerLions === 'yes'){
+    //Tell user they got it correct
+    alert('You know it!  And they are going to win the Super Bowl! (No they won\'t.)');
+    score++;
+  } else {
+    //Tell user they got it wrong
+    alert('You barely know me!  It\'s rough, but I love my Lions.');
+  }
+  //score update
+  console.log('Score after question 5 is ' + score);
 }
-//score update
-console.log('Score after question 5 is ' + score);
+
+question5();
 
 
 //Question 6
