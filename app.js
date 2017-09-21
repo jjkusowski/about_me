@@ -26,20 +26,23 @@ function question1() {
 question1();
 
 //Question 2
-var answerDog = prompt('Do I have a dog?').toLowerCase();
-console.log('answerDog is ' + answerDog);
+function question2() {
+  var answerDog = prompt('Do I have a dog?').toLowerCase();
+  console.log('answerDog is ' + answerDog);
 
-if (answerDog === 'y' || answerDog === 'yes'){
-  //Tell user they got it correct
-  alert('Correct!  I have a 90 pound Golden Doodle named Dewey.');
-  score++;
-} else {
-  //Tell user they got it wrong
-  alert('Whoops!  Dewey would be upset with you!  He\'s my 90 pound Golden Doodle.');
+  if (answerDog === 'y' || answerDog === 'yes'){
+    //Tell user they got it correct
+    alert('Correct!  I have a 90 pound Golden Doodle named Dewey.');
+    score++;
+  } else {
+    //Tell user they got it wrong
+    alert('Whoops!  Dewey would be upset with you!  He\'s my 90 pound Golden Doodle.');
+  }
+  //score update
+  console.log('Score after question 2 is ' + score);
 }
-//score update
-console.log('Score after question 2 is ' + score);
 
+question2();
 
 //Question 3
 var answerBook = prompt('Have I written a New York Times Best Seller book?').toLowerCase();
