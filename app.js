@@ -142,28 +142,30 @@ function question6() {
 question6();
 
 //Question 7
-
-var mySports = ['basketball', 'hockey', 'baseball', 'football'];
-var mySportsAsString = mySports.join(', ');
-for (i = 1; i < 8; i++) {
-  if (i === 7){
-    alert('I\'m sorry.  You are out of tries.  The sports I\'ve played are ' + mySportsAsString + '.');
-  } else {
-    var sportsGuess = prompt('I played a lot of team sports growing up.  Can you guess one?');
-    sportsGuess = sportsGuess.toLowerCase();
-    console.log('Guess '+ i + ':' + sportsGuess)
-    if (mySports.indexOf(sportsGuess) > -1) {
-      alert('Correct!  Nice going!  The sports I\'ve played are ' + mySportsAsString + '.');
-      score++;
-      break;
+function question7() {
+  var mySports = ['basketball', 'hockey', 'baseball', 'football'];
+  var mySportsAsString = mySports.join(', ');
+  for (var i = 1; i < 8; i++) {
+    if (i === 7){
+      alert('I\'m sorry.  You are out of tries.  The sports I\'ve played are ' + mySportsAsString + '.');
     } else {
-      alert('Nope!  I did not play that one.');
+      var sportsGuess = prompt('I played a lot of team sports growing up.  Can you guess one?');
+      sportsGuess = sportsGuess.toLowerCase();
+      console.log('Guess ' + i + ':' + sportsGuess);
+      if (mySports.indexOf(sportsGuess) > -1) {
+        alert('Correct!  Nice going!  The sports I\'ve played are ' + mySportsAsString + '.');
+        score++;
+        break;
+      } else {
+        alert('Nope!  I did not play that one.');
+      }
     }
   }
+  //score update
+  console.log('Score after question 7 is ' + score);
 }
-//score update
-console.log('Score after question 7 is ' + score);
 
+question7();
 
 //Tell user their score
 if (score === 7) {
@@ -173,5 +175,5 @@ if (score === 7) {
 } else if (score > 0) {
   alert(score + ' out of 7, ' + userName + '?  You need to get to know me a little better.');
 } else {
-  alert('Zero, ' + userName + '?  You got zero?  Try a little harder next time.')
+  alert('Zero, ' + userName + '?  You got zero?  Try a little harder next time.');
 }
