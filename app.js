@@ -104,38 +104,42 @@ question5();
 
 
 //Question 6
-var myNumber = Math.floor((Math.random() * 10) + 1);
-console.log('myNumber is: ' + myNumber);
+function question6() {
+  var myNumber = Math.floor((Math.random() * 10) + 1);
+  console.log('myNumber is: ' + myNumber);
 
-for (var i = 0; i < 5; i++) {
-  //Check if user is out of tries
-  if (i === 4) {
-    //tell user the correct number and that they are out of tries and break
-    alert('I\'m sorry.  You are out of tries.  The correct number is ' + myNumber + '. Move on to the next question.');
-  } else {
-    var userNumber = parseInt(prompt("Please pick a number between 1 and 10."));
-    console.log('userNumber is: ' + userNumber + ' Match? ' + (userNumber === myNumber));
-    if (userNumber === myNumber){
-      //correct answer
-      alert('You are correct!  It is ' + myNumber + '.  On to the next question!');
-      score++;
-      break;
-    } else if (userNumber < myNumber){
-      //Too low.
-      alert('Sorry! My number is higher than ' + userNumber + '.');
-    } else if (userNumber > myNumber){
-      //Too high.
-      alert('Sorry! My number is lower than ' + userNumber + '.');
+  for (var i = 0; i < 5; i++) {
+    //Check if user is out of tries
+    if (i === 4) {
+      //tell user the correct number and that they are out of tries and break
+      alert('I\'m sorry.  You are out of tries.  The correct number is ' + myNumber + '. Move on to the next question.');
     } else {
-      //I didn't understand your input.
-      alert('I didn\'t understand you.  Make sure your number is a whole number between 1 and 10.');
+      var userNumber = parseInt(prompt('Please pick a number between 1 and 10.'));
+      console.log('userNumber is: ' + userNumber + ' Match? ' + (userNumber === myNumber));
+      if (userNumber === myNumber){
+        //correct answer
+        alert('You are correct!  It is ' + myNumber + '.  On to the next question!');
+        score++;
+        break;
+      } else if (userNumber < myNumber){
+        //Too low.
+        alert('Sorry! My number is higher than ' + userNumber + '.');
+      } else if (userNumber > myNumber){
+        //Too high.
+        alert('Sorry! My number is lower than ' + userNumber + '.');
+      } else {
+        //I didn't understand your input.
+        alert('I didn\'t understand you.  Make sure your number is a whole number between 1 and 10.');
+      }
+
     }
 
   }
-
+  //score update
+  console.log('Score after question 6 is ' + score);
 }
-//score update
-console.log('Score after question 6 is ' + score);
+
+question6();
 
 //Question 7
 
