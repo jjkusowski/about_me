@@ -6,19 +6,24 @@ alert('Hi, ' + userName + ', nice to meet you.  I wrote a quiz about me.  See if
 var score = 0;
 
 //Question 1
-var answerDaughter = prompt('Do I have a daughter?').toLowerCase();
-console.log('answerDaughter is ' + answerDaughter);
+function question1() {
 
-if (answerDaughter === 'y' || answerDaughter === 'yes'){
-  //Tell user they got it correct
-  alert('Correct!  She turns 2 in October and her name is Sarah.');
-  score++;
-} else {
-  //Tell user they got it wrong
-  alert('Whoops!  My daughter\'s name is Sarah and she will be 2 in October.');
+  var answerDaughter = prompt('Do I have a daughter?').toLowerCase();
+  console.log('answerDaughter is ' + answerDaughter);
+
+  if (answerDaughter === 'y' || answerDaughter === 'yes'){
+    //Tell user they got it correct
+    alert('Correct!  She turns 2 in October and her name is Sarah.');
+    score++;
+  } else {
+    //Tell user they got it wrong
+    alert('Whoops!  My daughter\'s name is Sarah and she will be 2 in October.');
+  }
+  //score update
+  console.log('Score after question 1 is ' + score);
 }
-//score update
-console.log('Score after question 1 is ' + score);
+
+question1();
 
 //Question 2
 var answerDog = prompt('Do I have a dog?').toLowerCase();
