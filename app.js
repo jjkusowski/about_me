@@ -64,19 +64,23 @@ function question3() {
 question3();
 
 //Question 4
-var answerHome = prompt('Do I live in Seattle?').toLowerCase();
-console.log('answerHome is ' + answerHome);
+function question4() {
+  var answerHome = prompt('Do I live in Seattle?').toLowerCase();
+  console.log('answerHome is ' + answerHome);
 
-if (answerHome === 'y' || answerHome === 'yes'){
-  //Tell user they got it correct
-  alert('Yes!  I live in West Seattle.');
-  score++;
-} else {
-  //Tell user they got it wrong
-  alert('Sorry!  I do live in Seattle.  West Seattle, in particular.');
+  if (answerHome === 'y' || answerHome === 'yes'){
+    //Tell user they got it correct
+    alert('Yes!  I live in West Seattle.');
+    score++;
+  } else {
+    //Tell user they got it wrong
+    alert('Sorry!  I do live in Seattle.  West Seattle, in particular.');
+  }
+  //score update
+  console.log('Score after question 4 is ' + score);
 }
-//score update
-console.log('Score after question 4 is ' + score);
+
+question4();
 
 
 //Question 5
